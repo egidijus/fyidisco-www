@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head>
+    <title>Rob's Audio Player</title>
+ 
+    <script src="mediaelement/jquery.js"></script>
+    <script src="mediaelement/mediaelement-and-player.min.js"></script>
+    
+    <meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0;  user-scalable=0;" name="viewport">
+        
+    
+<style>
+ 
+body {
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-right:0px;
+    
+} 
+  
+    
+.audio-player,
+.audio-player div,
+.audio-player h1,
+.audio-player a,
+.audio-player img,
+.audio-player span,
+.audio-player button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline:none;
+}
+
+.audio-player{
+    width:227px; margin:0 auto;
+    position:relative;
+    height:235px;
+}
+
+.mytext{
+    width:227px; margin:0 auto;
+    position:relative;
+    /*border-bottom:1px solid #7a0092;*/
+    text-align:center;
+    padding:10px 0 20px 0;
+    font-family:Georgia, serif;
+    color: #7a0092;
+	-webkit-text-stroke: 1px black;
+   	text-shadow:
+       1px 1px 0 #fff,
+     -1px -1px 0 #fff,  
+      1px -1px 0 #fff,
+      -1px 1px 0 #fff,
+       1px 1px 0 #fff;
+}
+
+.line {
+    border-top:1px solid #7a0092;
+    height:1px;
+    /*width:227px; margin:0 auto;*/
+}
+
+.logo{
+    width:108px; margin:0 auto;
+    position:relative
+}
+
+
+.logobottom{
+    width:108px; margin:0 auto;
+    position:relative;
+    padding-top:10px;
+    
+}
+
+
+.wrapper{
+    background-image:url(images/bgv2.jpg);
+   	background-size: 100% auto;
+}
+
+.mejs-controls .mejs-play button,
+.mejs-controls .mejs-pause button {
+    width: 227px;
+    height: 235px;
+    top: 35px;
+    left: 135px;
+    background: transparent url(images/play-pause.png) 0 0;
+}
+ 
+.mejs-controls .mejs-pause button { background-position:0 -250px; }
+ 
+/*hide play duration timers*/
+.mejs-time-total, .mejs-duration, .mejs-currenttime { display:none;}
+
+.mejs-long-video{width:227px;}
+   
+</style>
+    
+</head>
+
+
+
+<body width="device-width">
+
+
+<div class="wrapper">
+<div class="logo"><img src="images/1000smiles.png" width="108" height="96" /></div>
+
+<div class="audio-player">
+    <audio id="audio-player" width="227" src="http://192.168.1.2:8000/listen" type="audio/mp3" controls="controls"></audio>
+</div>
+
+
+<div class="mytext">1. Press play<br/>
+2. Warm those muscles<br />
+3. Dance!</div>
+
+</div>
+
+<div class="line"></div>
+
+<div class="logobottom"><img src="images/logo.png" width="108" height="47" /></div>
+
+
+
+
+<!--<div class="audio-player">
+
+    <audio width="227" src="http://192.168.1.2:8000/listen" type="audio/mp3" controls="controls" controls></audio>
+
+</div>-->
+
+
+
+<script>
+
+//$('audio,video').mediaelementplayer();
+
+$(document).ready(function() {
+        $('#audio-player').mediaelementplayer();
+});
+
+</script>
+
+
+
+
+</body>
+</html>
